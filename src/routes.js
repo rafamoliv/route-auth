@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import { isAuthenticated } from "./auth";
 
+// private route for authentication, just access if isAuthenticated = true
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
@@ -22,6 +23,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
   />
 );
 
+// routes
 const Routes = () => (
   <BrowserRouter>
     <Switch>
